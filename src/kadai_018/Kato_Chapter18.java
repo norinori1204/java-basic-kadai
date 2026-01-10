@@ -1,0 +1,27 @@
+package kadai_018;
+
+abstract public class Kato_Chapter18 {
+	
+	//姓
+	public String familyName;
+    // 名
+    public String givenName;
+    // 住所
+    public String address;
+    
+    // 共通の紹介
+    public void commonIntroduce() {
+        System.out.println("名前は" + familyName + givenName + "です");
+        System.out.println("住所は" + address + "です");
+    }
+    
+     // 個別の紹介（中身は子クラスで書く）
+     abstract public void eachIntroduce();
+     
+      // 紹介を実行する
+      public void execIntroduce() {
+         commonIntroduce();   // 共通部分
+         eachIntroduce();     // 個別部分
+     }
+
+}
